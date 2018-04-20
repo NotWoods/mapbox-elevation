@@ -6,6 +6,6 @@ self.onmessage = event => {
     const result = convertImage(data);
     self.postMessage({ id, result }, [result.buffer]);
   } catch (error) {
-    self.postMessage({ id, result });
+    self.postMessage({ id, error });
   }
 };

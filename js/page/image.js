@@ -9,8 +9,6 @@ class ImageWorker extends WorkerMessenger {
    * @returns {Uint8ClampedArray}
    */
   convertImage(imagedata) {
-    return this.requestResponse({ data: imagedata.data }, [
-      imagedata.data.buffer
-    ]);
+    return this.requestResponse(imagedata.data, [imagedata.data.buffer]);
   }
 }

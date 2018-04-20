@@ -37,7 +37,7 @@ function* imageMeters(imagedata) {
  * @param {Uint8ClampedArray} imagedata
  */
 function* normalizeHeights(imagedata) {
-  const heights = new Uint8Array(imagedata.length / 4);
+  const heights = new Array(imagedata.length / 4);
 
   let lowest = Number.POSITIVE_INFINITY;
   let highest = 0;
@@ -54,7 +54,7 @@ function* normalizeHeights(imagedata) {
 
   const diff = highest - lowest;
   for (const height of heights) {
-    yield Math.round((height - lowest) / diff);
+    yield Math.round((height - lowest) / diff * 255);
   }
 }
 
