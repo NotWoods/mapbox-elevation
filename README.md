@@ -15,3 +15,6 @@ as a new image.
 
 ## See also
 * [Mapbox - Access elevation data](https://www.mapbox.com/help/access-elevation-data)
+
+## Licensing
+This project is avaliable under the MIT License.
